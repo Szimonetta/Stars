@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<!--
+Created using JS Bin
+http://jsbin.com
+
+Copyright (c) 2017 by Szimonetta (http://jsbin.com/zozuhu/2/edit)
+
+Released under the MIT license: http://jsbin.mit-license.org
+-->
+<meta name="robots" content="noindex">
+<html>
+<head>
+<meta name="description" content="star()">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+</head>
+<body>
+<canvas id="myCanvas" height="300" width="450" style="border: 1px solid black"></canvas>
+<script id="jsbin-javascript">
+var canvas = document.getElementById('myCanvas');
+var context = canvas.getContext('2d');
+
+function filledStar(x,y,a) {
+  context.beginPath();
+  context.moveTo(x,y);
+  context.lineTo(x+a,y);
+  context.lineTo(x+a/5,y+a/2);
+  context.lineTo(x+a/2,x*0.68);
+  context.lineTo(x+a*0.8,y+a/2);
+  context.lineTo(x,y);
+  context.fillStyle='purple';
+  context.fill();
+}
+
+filledStar(40,50,75);
+filledStar(130,120,100);
+filledStar(250,220,150);
+</script>
+</body>
+</html>
